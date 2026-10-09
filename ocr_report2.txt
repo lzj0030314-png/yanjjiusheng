@@ -1,0 +1,556 @@
+﻿Engine language: zh-Hans-CN
+
+============================================================
+FILE: report_hq_p1.png
+============================================================
+powershell : Exception calling "FromFile" with "1" argument(s): "d:\浠ｇ爜澶嶇幇\report_hq_p1.png"
+At line:15 char:10416
++ ... | Out-Null; powershell -ExecutionPolicy Bypass -File d:\代码复现\ocr2.ps1 ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Exception calli...port_hq_p1.png":String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+At D:\代码复现\ocr2.ps1:36 char:5
++     $img = [System.Drawing.Image]::FromFile($path)
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : FileNotFoundException
+ 
+  full size: x
+New-Object : Exception calling ".ctor" with "2" argument(s): "Parameter is not valid."
+At D:\代码复现\ocr2.ps1:48 char:16
++         $bmp = New-Object System.Drawing.Bitmap($q.W, $q.H)
++                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [New-Object], MethodInvocationException
+    + FullyQualifiedErrorId : ConstructorInvokedThrowException,Microsoft.PowerShell.Commands.NewObjectCommand
+ 
+Exception calling "FromImage" with "1" argument(s): "Value cannot be null.
+Parameter name: image"
+At D:\代码复现\ocr2.ps1:49 char:9
++         $g = [System.Drawing.Graphics]::FromImage($bmp)
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ArgumentNullException
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:50 char:9
++         $g.DrawImage($img, (New-Object System.Drawing.Rectangle(0, 0, ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:51 char:9
++         $g.Dispose()
++         ~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:54 char:9
++         $bmp.Save($tmpFile, [System.Drawing.Imaging.ImageFormat]::Png ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:55 char:9
++         $bmp.Dispose()
++         ~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+Exception calling "Wait" with "1" argument(s): "One or more errors occurred."
+At D:\代码复现\ocr2.ps1:10 char:5
++     $netTask.Wait(-1) | Out-Null
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : AggregateException
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:58 char:9
++         $stream = Await ($file.OpenAsync([Windows.Storage.FileAccessM ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+Exception calling "CreateAsync" with "1" argument(s): "Invalid pointer
+Windows.Graphics.Imaging: One or more pointer arguments are null."
+At D:\代码复现\ocr2.ps1:59 char:9
++         $decoder = Await ([Windows.Graphics.Imaging.BitmapDecoder]::C ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NullReferenceException
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:60 char:9
++         $sbmp = Await ($decoder.GetSoftwareBitmapAsync()) ([Windows.G ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+Exception calling "RecognizeAsync" with "1" argument(s): "Object reference not set to an instance of an object."
+At D:\代码复现\ocr2.ps1:61 char:9
++         $result = Await ($engine.RecognizeAsync($sbmp)) ([Windows.Med ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NullReferenceException
+ 
+
+---- Quadrant TL ----
+
+New-Object : Exception calling ".ctor" with "2" argument(s): "Parameter is not valid."
+At D:\代码复现\ocr2.ps1:48 char:16
++         $bmp = New-Object System.Drawing.Bitmap($q.W, $q.H)
++                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [New-Object], MethodInvocationException
+    + FullyQualifiedErrorId : ConstructorInvokedThrowException,Microsoft.PowerShell.Commands.NewObjectCommand
+ 
+Exception calling "FromImage" with "1" argument(s): "Value cannot be null.
+Parameter name: image"
+At D:\代码复现\ocr2.ps1:49 char:9
++         $g = [System.Drawing.Graphics]::FromImage($bmp)
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ArgumentNullException
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:50 char:9
++         $g.DrawImage($img, (New-Object System.Drawing.Rectangle(0, 0, ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:51 char:9
++         $g.Dispose()
++         ~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:54 char:9
++         $bmp.Save($tmpFile, [System.Drawing.Imaging.ImageFormat]::Png ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:55 char:9
++         $bmp.Dispose()
++         ~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+Exception calling "Wait" with "1" argument(s): "One or more errors occurred."
+At D:\代码复现\ocr2.ps1:10 char:5
++     $netTask.Wait(-1) | Out-Null
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : AggregateException
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:58 char:9
++         $stream = Await ($file.OpenAsync([Windows.Storage.FileAccessM ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+Exception calling "CreateAsync" with "1" argument(s): "Invalid pointer
+Windows.Graphics.Imaging: One or more pointer arguments are null."
+At D:\代码复现\ocr2.ps1:59 char:9
++         $decoder = Await ([Windows.Graphics.Imaging.BitmapDecoder]::C ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NullReferenceException
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:60 char:9
++         $sbmp = Await ($decoder.GetSoftwareBitmapAsync()) ([Windows.G ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+Exception calling "RecognizeAsync" with "1" argument(s): "Object reference not set to an instance of an object."
+At D:\代码复现\ocr2.ps1:61 char:9
++         $result = Await ($engine.RecognizeAsync($sbmp)) ([Windows.Med ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NullReferenceException
+ 
+
+---- Quadrant BL ----
+
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:66 char:5
++     $img.Dispose()
++     ~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+
+============================================================
+FILE: report_hq_p2.png
+============================================================
+Exception calling "FromFile" with "1" argument(s): "d:\浠ｇ爜澶嶇幇\report_hq_p2.png"
+At D:\代码复现\ocr2.ps1:36 char:5
++     $img = [System.Drawing.Image]::FromFile($path)
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : FileNotFoundException
+ 
+  full size: x
+New-Object : Exception calling ".ctor" with "2" argument(s): "Parameter is not valid."
+At D:\代码复现\ocr2.ps1:48 char:16
++         $bmp = New-Object System.Drawing.Bitmap($q.W, $q.H)
++                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [New-Object], MethodInvocationException
+    + FullyQualifiedErrorId : ConstructorInvokedThrowException,Microsoft.PowerShell.Commands.NewObjectCommand
+ 
+Exception calling "FromImage" with "1" argument(s): "Value cannot be null.
+Parameter name: image"
+At D:\代码复现\ocr2.ps1:49 char:9
++         $g = [System.Drawing.Graphics]::FromImage($bmp)
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ArgumentNullException
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:50 char:9
++         $g.DrawImage($img, (New-Object System.Drawing.Rectangle(0, 0, ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:51 char:9
++         $g.Dispose()
++         ~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:54 char:9
++         $bmp.Save($tmpFile, [System.Drawing.Imaging.ImageFormat]::Png ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:55 char:9
++         $bmp.Dispose()
++         ~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+Exception calling "Wait" with "1" argument(s): "One or more errors occurred."
+At D:\代码复现\ocr2.ps1:10 char:5
++     $netTask.Wait(-1) | Out-Null
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : AggregateException
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:58 char:9
++         $stream = Await ($file.OpenAsync([Windows.Storage.FileAccessM ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+Exception calling "CreateAsync" with "1" argument(s): "Invalid pointer
+Windows.Graphics.Imaging: One or more pointer arguments are null."
+At D:\代码复现\ocr2.ps1:59 char:9
++         $decoder = Await ([Windows.Graphics.Imaging.BitmapDecoder]::C ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NullReferenceException
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:60 char:9
++         $sbmp = Await ($decoder.GetSoftwareBitmapAsync()) ([Windows.G ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+Exception calling "RecognizeAsync" with "1" argument(s): "Object reference not set to an instance of an object."
+At D:\代码复现\ocr2.ps1:61 char:9
++         $result = Await ($engine.RecognizeAsync($sbmp)) ([Windows.Med ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NullReferenceException
+ 
+
+---- Quadrant TL ----
+
+New-Object : Exception calling ".ctor" with "2" argument(s): "Parameter is not valid."
+At D:\代码复现\ocr2.ps1:48 char:16
++         $bmp = New-Object System.Drawing.Bitmap($q.W, $q.H)
++                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [New-Object], MethodInvocationException
+    + FullyQualifiedErrorId : ConstructorInvokedThrowException,Microsoft.PowerShell.Commands.NewObjectCommand
+ 
+Exception calling "FromImage" with "1" argument(s): "Value cannot be null.
+Parameter name: image"
+At D:\代码复现\ocr2.ps1:49 char:9
++         $g = [System.Drawing.Graphics]::FromImage($bmp)
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ArgumentNullException
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:50 char:9
++         $g.DrawImage($img, (New-Object System.Drawing.Rectangle(0, 0, ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:51 char:9
++         $g.Dispose()
++         ~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:54 char:9
++         $bmp.Save($tmpFile, [System.Drawing.Imaging.ImageFormat]::Png ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:55 char:9
++         $bmp.Dispose()
++         ~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+Exception calling "Wait" with "1" argument(s): "One or more errors occurred."
+At D:\代码复现\ocr2.ps1:10 char:5
++     $netTask.Wait(-1) | Out-Null
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : AggregateException
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:58 char:9
++         $stream = Await ($file.OpenAsync([Windows.Storage.FileAccessM ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+Exception calling "CreateAsync" with "1" argument(s): "Invalid pointer
+Windows.Graphics.Imaging: One or more pointer arguments are null."
+At D:\代码复现\ocr2.ps1:59 char:9
++         $decoder = Await ([Windows.Graphics.Imaging.BitmapDecoder]::C ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NullReferenceException
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:60 char:9
++         $sbmp = Await ($decoder.GetSoftwareBitmapAsync()) ([Windows.G ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+Exception calling "RecognizeAsync" with "1" argument(s): "Object reference not set to an instance of an object."
+At D:\代码复现\ocr2.ps1:61 char:9
++         $result = Await ($engine.RecognizeAsync($sbmp)) ([Windows.Med ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NullReferenceException
+ 
+
+---- Quadrant BL ----
+
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:66 char:5
++     $img.Dispose()
++     ~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+
+============================================================
+FILE: report_hq_p3.png
+============================================================
+Exception calling "FromFile" with "1" argument(s): "d:\浠ｇ爜澶嶇幇\report_hq_p3.png"
+At D:\代码复现\ocr2.ps1:36 char:5
++     $img = [System.Drawing.Image]::FromFile($path)
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : FileNotFoundException
+ 
+  full size: x
+New-Object : Exception calling ".ctor" with "2" argument(s): "Parameter is not valid."
+At D:\代码复现\ocr2.ps1:48 char:16
++         $bmp = New-Object System.Drawing.Bitmap($q.W, $q.H)
++                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [New-Object], MethodInvocationException
+    + FullyQualifiedErrorId : ConstructorInvokedThrowException,Microsoft.PowerShell.Commands.NewObjectCommand
+ 
+Exception calling "FromImage" with "1" argument(s): "Value cannot be null.
+Parameter name: image"
+At D:\代码复现\ocr2.ps1:49 char:9
++         $g = [System.Drawing.Graphics]::FromImage($bmp)
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ArgumentNullException
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:50 char:9
++         $g.DrawImage($img, (New-Object System.Drawing.Rectangle(0, 0, ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:51 char:9
++         $g.Dispose()
++         ~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:54 char:9
++         $bmp.Save($tmpFile, [System.Drawing.Imaging.ImageFormat]::Png ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:55 char:9
++         $bmp.Dispose()
++         ~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+Exception calling "Wait" with "1" argument(s): "One or more errors occurred."
+At D:\代码复现\ocr2.ps1:10 char:5
++     $netTask.Wait(-1) | Out-Null
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : AggregateException
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:58 char:9
++         $stream = Await ($file.OpenAsync([Windows.Storage.FileAccessM ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+Exception calling "CreateAsync" with "1" argument(s): "Invalid pointer
+Windows.Graphics.Imaging: One or more pointer arguments are null."
+At D:\代码复现\ocr2.ps1:59 char:9
++         $decoder = Await ([Windows.Graphics.Imaging.BitmapDecoder]::C ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NullReferenceException
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:60 char:9
++         $sbmp = Await ($decoder.GetSoftwareBitmapAsync()) ([Windows.G ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+Exception calling "RecognizeAsync" with "1" argument(s): "Object reference not set to an instance of an object."
+At D:\代码复现\ocr2.ps1:61 char:9
++         $result = Await ($engine.RecognizeAsync($sbmp)) ([Windows.Med ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NullReferenceException
+ 
+
+---- Quadrant TL ----
+
+New-Object : Exception calling ".ctor" with "2" argument(s): "Parameter is not valid."
+At D:\代码复现\ocr2.ps1:48 char:16
++         $bmp = New-Object System.Drawing.Bitmap($q.W, $q.H)
++                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [New-Object], MethodInvocationException
+    + FullyQualifiedErrorId : ConstructorInvokedThrowException,Microsoft.PowerShell.Commands.NewObjectCommand
+ 
+Exception calling "FromImage" with "1" argument(s): "Value cannot be null.
+Parameter name: image"
+At D:\代码复现\ocr2.ps1:49 char:9
++         $g = [System.Drawing.Graphics]::FromImage($bmp)
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ArgumentNullException
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:50 char:9
++         $g.DrawImage($img, (New-Object System.Drawing.Rectangle(0, 0, ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:51 char:9
++         $g.Dispose()
++         ~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:54 char:9
++         $bmp.Save($tmpFile, [System.Drawing.Imaging.ImageFormat]::Png ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:55 char:9
++         $bmp.Dispose()
++         ~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+Exception calling "Wait" with "1" argument(s): "One or more errors occurred."
+At D:\代码复现\ocr2.ps1:10 char:5
++     $netTask.Wait(-1) | Out-Null
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : AggregateException
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:58 char:9
++         $stream = Await ($file.OpenAsync([Windows.Storage.FileAccessM ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+Exception calling "CreateAsync" with "1" argument(s): "Invalid pointer
+Windows.Graphics.Imaging: One or more pointer arguments are null."
+At D:\代码复现\ocr2.ps1:59 char:9
++         $decoder = Await ([Windows.Graphics.Imaging.BitmapDecoder]::C ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NullReferenceException
+ 
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:60 char:9
++         $sbmp = Await ($decoder.GetSoftwareBitmapAsync()) ([Windows.G ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+Exception calling "RecognizeAsync" with "1" argument(s): "Object reference not set to an instance of an object."
+At D:\代码复现\ocr2.ps1:61 char:9
++         $result = Await ($engine.RecognizeAsync($sbmp)) ([Windows.Med ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : NullReferenceException
+ 
+
+---- Quadrant BL ----
+
+You cannot call a method on a null-valued expression.
+At D:\代码复现\ocr2.ps1:66 char:5
++     $img.Dispose()
++     ~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
